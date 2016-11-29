@@ -1,0 +1,41 @@
+{{!--
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2119597"></script>
+<!-- UY END -->
+--}}
+
+
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="{{slug}}"  data-title="{{{title}}}" data-url="{{url}}">
+    </div>
+</section>
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"oraxin"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+{{!--
+--}}
+
+{{!--
+<!-- 畅言 PC版-->
+<div id="SOHUCS" sid="{{@blog.id}}"></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+window._config = { showScore: true };
+window.changyan.api.config({
+appid: 'cysHssJYC',
+conf: 'prod_03e43ac7ca3d25cce533d024a83e4731'
+});
+</script>
+--}}
