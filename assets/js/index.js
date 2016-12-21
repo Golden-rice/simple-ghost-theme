@@ -53,4 +53,44 @@
         });
 
     };
+
+    // nav show/hide
+    var screenWidth = document.body.clientWidth;
+    if(screenWidth > 900){
+        var $nav = $(".nav"),
+            prescroll = 0,
+            scroll = $(document).scrollTop();
+
+        $(window).scroll(function(){
+            var curScroll = $(document).scrollTop();
+            // console.log('curscroll:'+curScroll+',prescroll:'+prescroll);
+            if(curScroll < prescroll && prescroll != 0){
+                $nav.removeClass('hide-nav');
+            }else if(curScroll > prescroll){
+                $nav.addClass('hide-nav');
+            }else if(curScroll == 0){
+                $nav.removeClass('hide-nav');
+            }
+            prescroll = curScroll;
+        })
+
+    }
+
+//  生成目录
+$(document).ready(function(){
+    if($(".post-content").length > 0){
+      console.log('make category');
+      $(".post-content h2,.post-content h3,.post-content h4,.post-content h5,.post-content h6").each(function(i,item){
+        var tag = $(item).get(0).localName;
+        $(item).attr("id","wow"+i);
+        $("#category").append('<a class="new'+tag+'" href="#wow'+i+'">'+$(this).text()+'</a></br>');
+        $(".newh2").css("margin-left",0);
+        $(".newh3").css("margin-left",20);
+        $(".newh4").css("margin-left",40);
+        $(".newh5").css("margin-left",60);
+        $(".newh6").css("margin-left",80);
+      });
+    }
+});
+
 })(jQuery);

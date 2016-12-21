@@ -18,12 +18,18 @@
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    
+    {{!-- Heightlight code for Markdown at Sublime Style --}}
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+    <script >hljs.initHighlightingOnLoad();</script>
+
+  <!--   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" /> -->
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{body_class}} nav-closed">
+<body class="{{body_class}}">
 
     {{!-- The blog navigation links --}}
     {{navigation}}
@@ -35,20 +41,23 @@
 
         {{!-- The tiny footer at the very bottom --}}
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href='http://www.miitbeian.gov.cn/'>宁ICP备16001777号-1</a> &copy; {{date format="YYYY"}} {{@blog.title}} <!--<a href="{{@blog.url}}">{{@blog.title}}</a>--></section>
+            <section class="copyright">
+                <a href='http://www.miitbeian.gov.cn/'>宁ICP备16001777号-1</a> &copy; {{date format="YYYY"}} {{@blog.title}} <!--<a href="{{@blog.url}}">{{@blog.title}}</a>-->
+            <!-- 站长统计 -->
+            <script src="https://s95.cnzz.com/z_stat.php?id=1260866895&web_id=1260866895" language="JavaScript"></script>
+            </section>
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
         </footer>
 
     </div>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
     {{!-- Fitvids makes video embeds responsive and awesome --}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
 </body>
 </html>

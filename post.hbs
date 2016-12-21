@@ -7,23 +7,26 @@
 {{#post}}
 
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    {{!--
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
-    --}}
 </header>
 
 <main class="content" role="main">
+    
 
     <article class="{{post_class}}">
-        {{!--标签 tags--}}
-        <section class="tag">
-            <h4> 标签 </h4>
-            {{tags sperator="&nbsp;"}}
+        {{!--文章侧边栏 --}}
+        <section class="post-aside">
+
+            {{!--标签 tags--}}
+            <section class="tag">
+                <h4> 标签 </h4>
+                {{tags sperator="&nbsp;"}}
+            </section>
+
+            {{!-- 目录 category--}}
+            <section >
+                <h4> 标签 </h4>
+                <div id="category"></div>
+            </section>
         </section>
 
         <header class="post-header">
@@ -44,7 +47,6 @@
         {{!-- Everything inside the #author tags pulls data from the author --}}
 
         {{#author}}
-
             {{#if image}}
             <figure class="author-image">
                 <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
@@ -66,6 +68,20 @@
             </section>
         {{/author}}
     
+        {{!-- Links to Previous/Next posts --}}
+        <aside class="read-other">
+            <h4>更多文章</h4>
+            <p>
+            {{#next_post}}
+            <a href="{{url}}" class="read-go-story">{{title}}&nbsp;&gt;</a>
+            {{/next_post}}
+            {{#prev_post}}
+            <a href="{{url}}" class="read-prev-story">&lt;&nbsp;{{title}}</a>
+            {{/prev_post}}
+            </p>
+        </aside>
+
+        {{!-- Share post --}}
         {{!-- 
             <section class="share">
                 <h4>Share this post</h4>
@@ -83,8 +99,9 @@
                 </a>
             </section>
         --}}   
-            {{!-- Email subscribe form at the bottom of the page --}}
-        {{!--    {{#if @labs.subscribers}}
+        {{!-- Email subscribe form at the bottom of the page --}}
+        {{!--    
+            {{#if @labs.subscribers}}
             <section class="gh-subscribe">
                 <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
                 <p>Get the latest posts delivered right to your inbox.</p>
@@ -105,6 +122,7 @@
 </main>
 
 {{!-- Links to Previous/Next posts --}}
+{{!--
 <aside class="read-next">
     {{#next_post}}
     <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
@@ -123,5 +141,6 @@
     </a>
     {{/prev_post}}
 </aside>
+--}}
 {{/post}}
 

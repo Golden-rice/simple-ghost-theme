@@ -6,11 +6,12 @@ You can look in [demo](http://www.donggg.com)
 
 ![img](/assets/screenshot-desktop.jpg)
 
-## what's I do
-* add duoshuo comment systerm 
-* refactor css 
+## 增加功能
+* 导航滚动隐藏
+* 响应式隐藏导航
+* 增加站长统计
+* 更新排版样式：添加了heightlight来高亮代码
+！
+* 增加目录导航
 
-## i haven't do
-* complete soomth interactive animation
-* finish other web app about resuit , production display , code laboratory, etc. 
 
