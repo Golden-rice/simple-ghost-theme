@@ -1,33 +1,38 @@
 {
-    "name": "simple",
-    "description": "A blogging theme for Ghost. Simple, minimal and responsive.",
-    "demo": "https://www.donggg.com",
-    "version": "1.0.0",
-    "engines": {
-        "ghost": ">=0.9.0 <1.0.0"
-    },
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
-        "mobile": "assets/screenshot-mobile.jpg"
-    },
-    "author": {
-        "name": "dimmer",
-        "url": "https://donggg.com"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Personal Blogs"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
-    }
+  "name": "simple",
+  "description": "A blogging theme for Ghost. Simple, minimal and responsive.",
+  "demo": "https://www.donggg.com",
+  "version": "2.0.0",
+  "engines": {
+    "ghost": ">=0.9.0 <1.0.0"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": "dimmer (https://donggg.com)",
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Personal Blogs"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TryGhost/Casper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TryGhost/Casper/issues"
+  },
+  "homepage": "https://github.com/TryGhost/Casper#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

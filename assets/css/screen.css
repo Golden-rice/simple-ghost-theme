@@ -1149,9 +1149,9 @@ section.tag a:hover{
    text column to break out. */
 .post-content img {
     display: block;
-    max-width: 126%;
+    max-width: 100%;
     height: auto;
-    padding: 0.6em 0;
+    /*padding: 0.6em 0;*/
     /* Centers an image by (1) pushing its left edge to the
        center of its container and (2) shifting the entire image
        in the opposite direction by half its own width.
@@ -1162,7 +1162,16 @@ section.tag a:hover{
     -ms-transform: translateX(-50%); /* for IE9 */
     transform: translateX(-50%);
 }
-
+.post-content .img-wrap{
+    box-sizing: border-box;
+    margin: 0 0 1.75em 0;
+    border: #E3EDF3 1px solid;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    background: #F7FAFB;
+    border-radius: 3px;
+}
 .footnotes {
     font-style: italic;
     font-size: 1.3rem;
@@ -1271,7 +1280,7 @@ section.tag a:hover{
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65vh;
+    height: 45vh;
     min-height: 180px;
 }
 
@@ -2052,9 +2061,6 @@ section.tag a:hover{
         font-size: 1.6rem;
     }
 
-    .post-head.main-header {
-        height:45vh;
-    }
     .post-aside{
         display: none;
     }
@@ -2068,6 +2074,9 @@ section.tag a:hover{
     .tag-head.main-header,
     .author-head.main-header {
         height: 30vh;
+    }
+    .post-head.main-header {
+        height:30vh;
     }
 
     .no-cover.post-head.main-header {
@@ -2387,7 +2396,7 @@ section.tag a:hover{
     }
 
     .post-head.main-header {
-        height: 30vh;
+        height: 15vh;
     }
 
     .tag-head.main-header,

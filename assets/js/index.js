@@ -120,4 +120,11 @@
         })
     }
 
+    // post img decoration
+    var $img = $('.post-content img');
+    if($img.length >0){
+        $img.wrap('<div class="img-wrap"></div>')
+    }
+
+
 })(jQuery);
