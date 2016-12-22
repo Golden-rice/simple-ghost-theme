@@ -315,15 +315,17 @@ hr {
 }
 
 blockquote {
-    -moz-box-sizing: border-box;
+    moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.75em 0 1.75em -2.2em;
-    padding: 0 0 0 1.75em;
+    margin: 1.75em 0 1.75em 0em;
+    padding: 0.5em 0.5em 0.5em 1.75em;
     border-left: #4A4A4A 0.4em solid;
+    background-color: #F7F7F7;
 }
 
 blockquote p {
     margin: 0.8em 0;
+    font-size: 1.3rem;
     font-style: italic;
 }
 
@@ -886,6 +888,9 @@ button {
 }
 .home-template .main-header {
     margin-bottom: 0px;
+}
+.home-template .post{
+    margin: 4rem 0;
 }
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -1729,8 +1734,8 @@ section.tag a:hover{
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
-    border-top: 1px solid #ddd;
-    background-color:#fff; 
+    border-top: #E7EEF2 1px solid;
+    /*background-color:#fff; */
 }
 
 .site-footer a {
@@ -2006,8 +2011,8 @@ section.tag a:hover{
         margin-right: auto;
     }
     .home-wrap .post{
-        padding: 0;
-        margin: 0;
+        /*padding: 0;*/
+        margin: 0 0 4rem 0;
     }
 /* home-wrap  post end */
 
