@@ -11,7 +11,7 @@ You can look in [demo](http://www.donggg.com)
 * 响应式隐藏导航
 * 增加站长统计
 * 更新排版样式：添加了heightlight来高亮代码
-！
 * 增加目录导航
+* 优化加载速度
 
 

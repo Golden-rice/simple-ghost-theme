@@ -1086,38 +1086,16 @@ body.page-template .post-title {
     position: absolute;
     top: 3rem;
     right: 0px;
-    width: 300px;
-    margin-right: -350px;
+    width: 200px;
+    margin-right: -250px;
 }
 
-.post-aside section{
-
-    margin-bottom: 30px;
-}
-.category-warp{
-    width: 300px;
-}
-.category-fixed {
-    position: fixed;
-    top: 4rem;
-}
-.cat-li{
-    padding: 0px 0px 0px 15px;
-    border-left: 3px solid #ccc;
-}
-.cat-li:hover,
-.cat-li a:hover{
-    color: orange;
-}
-.cat-li-active{
-    color: #666;
-    background: #eee; /* #FFA500 */
-}
-
-
-/* post aside end */
 
 /* tags form posts */
+span.tag{
+    display: none;
+}
+
 section.tag{
 
     /*margin: 0 4rem 0 0;*/
@@ -1149,7 +1127,8 @@ section.tag a:hover{
    text column to break out. */
 .post-content img {
     display: block;
-    max-width: 126%;
+    // max-width: 126%;
+    max-width: 100%;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
@@ -2055,9 +2034,7 @@ section.tag a:hover{
     .post-head.main-header {
         height:45vh;
     }
-    .post-aside{
-        display: none;
-    }
+    
     section.tag{
         display: none;
     }

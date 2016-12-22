@@ -59,10 +59,10 @@
     if(screenWidth > 900){
         var $nav = $(".nav"),
             prescroll = 0,
-            scroll = $(document).scrollTop();
+            scroll = $document.scrollTop();
 
         $(window).scroll(function(){
-            var curScroll = $(document).scrollTop();
+            var curScroll = $document.scrollTop();
             // console.log('curscroll:'+curScroll+',prescroll:'+prescroll);
             if(curScroll < prescroll && prescroll != 0){
                 $nav.removeClass('hide-nav');
@@ -73,24 +73,51 @@
             }
             prescroll = curScroll;
         })
-
     }
 
-//  生成目录
-$(document).ready(function(){
-    if($(".post-content").length > 0){
-      console.log('make category');
-      $(".post-content h2,.post-content h3,.post-content h4,.post-content h5,.post-content h6").each(function(i,item){
-        var tag = $(item).get(0).localName;
-        $(item).attr("id","wow"+i);
-        $("#category").append('<a class="new'+tag+'" href="#wow'+i+'">'+$(this).text()+'</a></br>');
+    //  生成目录
+    var $post = $(".post-content"),
+        $targetHead = $(".post-content h2,.post-content h3,.post-content h4,.post-content h5,.post-content h6"),
+        $category = $("#category");
+
+    if($post.length > 0){
+        console.log('make category');
+        $targetHead.each(function(i, item){
+            var tag = $(item).get(0).localName;
+            $(item).attr("id","wow"+i);
+            $category.append('<li class="cat-li"><a class="new'+tag+'" href="#wow'+i+'" >'+$(this).text()+'</a></li>');
+        });
         $(".newh2").css("margin-left",0);
         $(".newh3").css("margin-left",20);
         $(".newh4").css("margin-left",40);
         $(".newh5").css("margin-left",60);
         $(".newh6").css("margin-left",80);
-      });
+
+        $('.cat-li').on('click', function(e){
+            $(this).addClass('cat-li-active').siblings().removeClass('cat-li-active');
+        })
     }
-});
+  
+
+    // category fixed
+    var screenWidth = document.body.clientWidth;
+    if(screenWidth > 900){
+        var category = $('.category-warp'),
+            categoryTop = category.offset().top;
+
+        // 初始
+        if( $document.scrollTop() + 40 >categoryTop ){
+            category.addClass('category-fixed');
+        }
+        $(window).scroll(function(){
+            var curScroll = $document.scrollTop();
+            if(curScroll + 40 >categoryTop){
+                category.addClass('category-fixed');
+            }else{
+                category.removeClass('category-fixed');
+            }
+            // console.log(categoryTop);
+        })
+    }
 
 })(jQuery);
