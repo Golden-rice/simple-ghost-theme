@@ -73,13 +73,24 @@
             <h4>更多文章</h4>
             <p>
             {{#next_post}}
-            <a href="{{url}}" class="read-go-story">{{title}}&nbsp;&gt;</a>
+            <a href="{{url}}" class="read-prev-story">下一篇：{{title}}</a>
             {{/next_post}}
             {{#prev_post}}
-            <a href="{{url}}" class="read-prev-story">&lt;&nbsp;{{title}}</a>
+            <a href="{{url}}" class="read-prev-story">上一篇：{{title}}</a>
             {{/prev_post}}
+            {{!--
+            {{#prev_post}}
+            <a href="{{url}}" class="read-go-story">&lt;&nbsp;{{title}}</a>
+            {{/prev_post}}
+            --}}
             </p>
         </aside>
+
+        {{!-- Share post in code --}}
+        <section class="share">
+            <h4>分享文章</h4>
+            <p></p><div id="qrcode"></div><p></p>
+        </section>
 
         {{!-- Share post --}}
         {{!-- 

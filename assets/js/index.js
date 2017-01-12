@@ -88,10 +88,10 @@
             $category.append('<li class="cat-li"><a class="new'+tag+'" href="#wow'+i+'" >'+$(this).text()+'</a></li>');
         });
         $(".newh2").css("margin-left",0);
-        $(".newh3").css("margin-left",20);
-        $(".newh4").css("margin-left",40);
-        $(".newh5").css("margin-left",60);
-        $(".newh6").css("margin-left",80);
+        $(".newh3").css("margin-left",10);
+        $(".newh4").css("margin-left",20);
+        $(".newh5").css("margin-left",30);
+        $(".newh6").css("margin-left",40);
 
         $('.cat-li').on('click', function(e){
             $(this).addClass('cat-li-active').siblings().removeClass('cat-li-active');
@@ -125,6 +125,9 @@
     if($img.length >0){
         $img.wrap('<div class="img-wrap"></div>')
     }
+
+    // 生成二维码
+    $('#qrcode').qrcode({width: 128,height: 128,text: 'http://www.donggg.com/git-stage-3/'});
 
 
 })(jQuery);

@@ -19,10 +19,13 @@
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     
-    {{!-- Heightlight code for Markdown at Sublime Style --}}
+    {{!-- Heightlight code in Markdown of Sublime Style --}}
     <link href="{{asset "css/hightline.monokai_sublime.min.css"}}" rel="stylesheet">
     <script src="{{asset "js/highlight-8.0.min.js"}}"></script>  
     <script >hljs.initHighlightingOnLoad();</script>
+
+
+
 
   <!--   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" /> -->
 
@@ -57,7 +60,9 @@
     {{ghost_foot}}
     {{!-- Fitvids makes video embeds responsive and awesome --}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    {{!-- The main JavaScript file for Casper --}}
+    {{!-- qrcode is a url code maker --}}
+    <script src="{{asset "js/jquery.qrcode.min.js"}}"></script>  
+    {{!-- The main JavaScript file for Simple --}}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 </body>
 </html>
