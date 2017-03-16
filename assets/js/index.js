@@ -127,7 +127,7 @@
     }
 
     // 生成二维码
-    $('#qrcode').qrcode({width: 128,height: 128,text: 'http://www.donggg.com/git-stage-3/'});
+    $('#qrcode').qrcode({width: 128,height: 128,text: window.location.href});
 
 
 })(jQuery);
